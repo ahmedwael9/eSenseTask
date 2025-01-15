@@ -39,5 +39,6 @@ export class LayoutsDashboardComponent implements OnInit {
   selectTab(index: number): void {
     this.selectedTabIndex = index;
   }
+  
 
 }

@@ -1,48 +1,42 @@
-<div class="h-100 position-relative">
-  <mat-toolbar color="primary">
-    <button class="button gray">
+<div class="h-100">
+  <header>
+    <button class="button">
       السجلات
     </button>
-    <span class="example-spacer"></span>
     <div class="flex align-center">
-      <span class="mat-h6 text-normal">
+      <div class="mat-h6 text-normal">
         شريف محمد عبد العزيز
-      </span>
-      <ui-image
+      </div>
+      <img
         src="https://wac-cdn.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=2493"
         alt="user-pic"
-        ratio="square"
-        radius="rounded"
-        type="cover"
         width="40px"
         class="ms-3"
       />
     </div>
-  </mat-toolbar>
+  </header>
+
   <div style="background-color: #2a2828;">
-      <div class="tab-headers">
-        <button 
-          *ngFor="let tab of tabs; let i = index" 
-          [class.active]="selectedTabIndex === i"
-          (click)="selectTab(i)"
-        >
-          {{ tab.title }}
-        </button>
-      </div>
-   </div>
-   <main class="dashboard-container position-relative">
-    <div class="dashboard-container-sidebar bg-medium">
+    <div class="tab-headers">
+      <button 
+        *ngFor="let tab of tabs; let i = index" 
+        [class.active]="selectedTabIndex === i"
+        (click)="selectTab(i)"
+      >
+        {{ tab.title }}
+      </button>
+    </div>
+  </div>
+  
+  <main class="dashboard-container position-relative">
+    <nav>
       <ul>
-          <li>
-            <a>ادارة المعلومات</a>
-          </li>
-          <li>
-            <a class="active">مجموعة المستلمين للجهات الخارجية</a>
-          </li>
+        <li><a href="#">ادارة المعلومات</a></li>
+        <li><a href="#" class="active">مجموعة المستلمين للجهات الخارجية</a></li>
       </ul>
-    </div>
-    <div class="dashboard-container-content">
+    </nav>
+    <article>
       <router-outlet></router-outlet>
-    </div>
+    </article>
   </main>
-</div>
+</div>  

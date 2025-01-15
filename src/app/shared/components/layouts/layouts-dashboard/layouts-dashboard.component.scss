@@ -1,12 +1,15 @@
-.example-spacer {
-    flex: 1 1 auto;
-}
-
-.page-content{
-    padding: 16px;
-}
-
-.button {
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  padding: 10px 10px;
+  justify-content: space-between;
+  background-color: #353332;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  .button {
     border: none;
     color: white;
     padding: 12px 18px;
@@ -16,53 +19,63 @@
     font-size: 15px;
     margin: 4px 2px;
     cursor: pointer;
-    &.gray{
-        background-color: #2a2828;
-    } 
+    background-color: #2a2828;
+}
 }
 
-.dashboard-container {
-    width: auto;
-    height: calc(100vh - 112px);
-    border: 1px solid #555;
-    display: flex;
-    &-sidebar {
-        flex: 1;
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: auto;
-          }
-          
-          li a {
-            display: block;
-            color: #000;
-            padding: 18px;
-            font-weight: 700;
-            font-size: 16px;
-            text-decoration: none;
-          }
-          
-          li a.active {
-            background-color: #d4e6f6;
-            color: #696e72;
-            border-right: 3px solid #0088ff;
-          }
-          
-          li a:hover:not(.active) {
-            background-color: #555;
-            transition: 0.1s;
-            color: white;
-          }
+
+.dashboard-container{
+  display: flex;
+  align-items: stretch;
+  height: calc(100vh - 117px);
+}
+
+nav {
+  background: #f6f6f6;
+  flex: 1;
+  height: 100%;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: auto;
     }
-    &-content {
-        flex: 6;
-        overflow-y:auto ;
+    
+    li a {
+      display: block;
+      color: #000;
+      padding: 18px;
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration: none;
+    }
+    
+    li a.active {
+      background-color: #d4e6f6;
+      color: #696e72;
+      border-right: 5px solid #0088ff;
+    }
+    
+    li a:hover:not(.active) {
+      background-color: #555;
+      transition: 0.1s;
+      color: white;
     }
 }
 
+article {
+  flex: 6;
+  overflow-y: auto;
+}
+
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
 
 .tab-headers button {
   padding:15px 23px;
@@ -78,4 +91,3 @@
   font-weight: bold;
   border-bottom: 3px solid #f9f9f9;
 }
-

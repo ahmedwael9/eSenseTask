@@ -6,7 +6,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { UiButtonComponent } from "../../../shared/components/ui-elements/ui-button/ui-button.component";
 import { CommonModule } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { AddUserDialogComponent } from '../../../features/users/components/dialogs/add-user-dialog/add-user-dialog.component';
