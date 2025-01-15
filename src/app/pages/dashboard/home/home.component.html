@@ -1,0 +1,18 @@
+<section>
+  <div style="background-color: #e2eef8;" class="flex align-center py-2">
+      <button class="btn ms-3" (click)="openAddNamePopup()">اضافة</button>
+      <div class="input">
+        <input 
+          type="text" 
+          placeholder="ابحث عن الاسم" 
+          [formControl]="searchControl"
+          class="search-input"
+        />
+      </div>
+  </div>
+  <div class="px-4 mt-3">
+    <div *ngFor="let user of (filteredUsers$ | async)"  class="my-2">
+       <user-card [userData]="user" />
+    </div>
+  </div>
+</section>

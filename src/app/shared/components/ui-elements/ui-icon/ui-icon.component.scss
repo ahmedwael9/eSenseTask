@@ -1,0 +1,43 @@
+ui-icon {
+    display: inline-flex;
+}
+
+.ui-icon.mat-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    &.ui-icon-size {
+        &-small {
+            width: 16px;
+            height: 16px;
+        }
+        &-medium {
+            width: 20px;
+            height: 20px;
+        }
+        &-large {
+            width: 24px;
+            height: 24px;
+        }
+        &-x-large {
+            width: 32px;
+            height: 32px;
+        }
+    }
+    &.ui-icon-margin {
+        &-start {
+            margin-inline-start: .5rem;
+        }
+        &-end {
+            margin-inline-end: .5rem;
+        }
+    }
+    &.ui-icon-color-white {
+        path {
+            color: white;
+        }
+    }
+    &.ui-icon-rotate {
+        transform: rotate(180deg);
+    }
+}

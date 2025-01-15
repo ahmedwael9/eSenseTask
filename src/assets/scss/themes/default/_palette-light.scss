@@ -1,0 +1,47 @@
+$light-text: (
+  base: mat-color($dooh-smb-primary, 500),
+  divider: rgba(0, 0, 0, 0.12),
+  dividers: rgba(0, 0, 0, 0.12),
+  disabled: rgba(0, 0, 0, 0.38),
+  disabled-button: rgba(0, 0, 0, 0.26),
+  disabled-text: rgba(0, 0, 0, 0.38),
+  elevation: black,
+  hint-text: rgba(0, 0, 0, 0.38),
+  secondary-text: rgba(0, 0, 0, 0.54),
+  icon: rgba(0, 0, 0, 0.54),
+  icons: rgba(0, 0, 0, 0.54),
+  text: #3E5363,
+  slider-min: rgba(0, 0, 0, 0.87),
+  slider-off: rgba(0, 0, 0, 0.26),
+  slider-off-active: rgba(0, 0, 0, 0.38),
+);
+
+$light-background: (
+  status-bar: #e0e0e0,
+  app-bar: #F1F4F7,
+  background: #F1F4F7,
+  hover: rgba(0, 0, 0, 0.04),
+  card: white,
+  dialog: white,
+  disabled-button: rgba(0, 0, 0, 0.12),
+  raised-button: white,
+  focused-button: rgba(0, 0, 0, 0.12),
+  selected-button: #e0e0e0,
+  selected-disabled-button: #bdbdbd,
+  disabled-button-toggle: #eeeeee,
+  unselected-chip: #e0e0e0,
+  disabled-list-option: #eeeeee,
+  tooltip: #616161,
+);
+
+[theme-mode=light] {
+  --background-container: #FFFFFF;
+  --background-medium: #F1F4F7;
+  --background-strong: #E5EBF0;
+  --background-primary-selected: #E3EBF4;
+  --text-medium: #3E5363;
+  --text-strong: #02090F;
+  --text-strong-lighter: #082237;
+  --text-disabled: #8A96A0;
+  --border-color: #BACBD8;
+}

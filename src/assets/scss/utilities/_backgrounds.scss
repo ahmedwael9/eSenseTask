@@ -1,0 +1,80 @@
+.bg-transparent {
+    background: transparent !important;
+}
+
+.bg-cover {
+    background-size: cover;
+}
+
+.bg-contain {
+    background-size: contain;
+}
+
+.bg-container {
+    background-color: var(--background-container) !important;
+}
+
+.bg-medium {
+    background-color: #f6f6f6 !important;
+}
+
+.bg-strong {
+    background-color: var(--background-strong) !important;
+}
+
+// Status colors
+.bg-active {
+    background-color: var(--active-color) !important;
+}
+
+.bg-active-fade {
+    background-color: var(--active-fade-color) !important;
+}
+
+.bg-draft {
+    background-color: var(--draft-color) !important;
+}
+
+.bg-draft-fade {
+    background-color: var(--draft-fade-color) !important;
+}
+
+.bg-paused {
+    background-color: var(--paused-color) !important;
+}
+
+.bg-paused-fade {
+    background-color: var(--paused-fade-color) !important;
+}
+
+.bg-refunded {
+    background-color: var(--refunded-color) !important;
+}
+
+.bg-refunded-fade {
+    background-color: var(--refunded-fade-color) !important;
+}
+
+.bg-canceled {
+    background-color: var(--canceled-color) !important;
+}
+
+.bg-canceled-fade {
+    background-color: var(--canceled-fade-color) !important;
+}
+
+.bg-ended {
+    background-color: var(--ended-color) !important;
+}
+
+.bg-ended-fade {
+    background-color: var(--ended-fade-color) !important;
+}
+
+.bg-paid {
+    background-color: var(--paid-color) !important;
+}
+
+.bg-paid-fade {
+    background-color: var(--paid-fade-color) !important;
+}

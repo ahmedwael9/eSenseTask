@@ -1,0 +1,60 @@
+<ng-container *ngIf="variant === 'text'">
+  <button
+    [ngClass]="getButtonClasses()"
+    [type]="type"
+    [color]="color"
+    [disabled]="disabled || loading"
+    mat-button
+  >
+    <ng-container [ngTemplateOutlet]="buttonContent"></ng-container>
+  </button>
+</ng-container>
+
+<ng-container *ngIf="variant === 'flat'">
+  <button
+    [ngClass]="getButtonClasses()"
+    [type]="type"
+    [color]="color"
+    [disabled]="disabled || loading"
+    mat-flat-button
+  >
+    <ng-container [ngTemplateOutlet]="buttonContent"></ng-container>
+  </button>
+</ng-container>
+
+<ng-container *ngIf="variant === 'stroked'">
+  <button
+    [ngClass]="getButtonClasses()"
+    [type]="type"
+    [color]="color"
+    [disabled]="disabled || loading"
+    mat-stroked-button
+  >
+    <ng-container [ngTemplateOutlet]="buttonContent"></ng-container>
+  </button>
+</ng-container>
+
+<ng-template #buttonContent>
+  <span class="ui-button-label flex align-center" [ngClass]="{'row-reverse': iconPosition === 'end'}">
+    
+    <span *ngIf="icon || loading" class="ui-button-label-icon">
+      <span *ngIf="icon && !loading" class="flex">
+        <ui-icon [name]="icon" [color]="iconColor" [size]="iconSize" />
+      </span>
+      <span [hidden]="!loading">
+        <mat-spinner [color]="color" diameter="20" />
+      </span>
+    </span>
+
+    <span class="ui-button-spacer"></span>
+    
+    <span class="ui-button-label-text text-nowrap">
+      {{ label }}
+    </span>
+
+    <span *ngIf="showDropdownIcon" class="ui-button-label-icon ms-2">
+      <ui-icon name="chevron-bottom" />
+    </span>
+  </span>
+
+</ng-template>

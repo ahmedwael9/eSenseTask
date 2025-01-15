@@ -1,0 +1,101 @@
+.cdk-overlay-container {
+    .cdk-overlay-backdrop {
+        backdrop-filter: blur(3px);
+        background-color: rgba(128, 128, 128, .12);
+    }
+    .cdk-global-overlay-wrapper {
+        .cdk-overlay-pane {
+            .mat-mdc-dialog-container {
+                --mdc-dialog-container-elevation-shadow: var(--shadow-md);
+                --mdc-dialog-container-shape: 8px;
+                --mdc-dialog-subhead-color: inherit;   
+                 border: 1px solid gray;
+                .mdc-dialog__title {
+                    font-family: inherit;
+                    line-height: inherit;
+                    letter-spacing: inherit;
+                    color: inherit;
+                    font-size: 1.35rem;
+                    font-weight: 500;
+                    &:before {
+                        display: none;
+                    }
+                }
+                .mdc-dialog__content {
+                    letter-spacing: 0;
+                }
+            }
+        }
+    }
+}
+
+.ui-dialog {
+    --mdc-dialog-supporting-text-font: var(--font-family);
+    .mat-mdc-dialog-container {
+        .mdc-dialog__title {
+            padding: 1.125rem 1.125rem 0 1.125rem;
+        }
+        .mdc-dialog__content {
+            padding: 1.125rem;
+        }
+        .mdc-dialog__actions {
+            padding: 0 1.125rem 1.125rem 1.125rem;
+        }
+    }
+}
+
+.ui-drawer {
+    .mat-mdc-dialog-container {
+        .mdc-dialog__container {
+            .mat-mdc-dialog-surface {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+
+                > :first-child {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                }
+
+                .mdc-dialog__title {
+                    padding: 1.125rem 1.125rem 1rem 1.125rem;
+                }
+                
+                .mdc-dialog__content {
+                    max-height: initial;
+                }
+
+                .mat-mdc-dialog-actions {
+                    position: sticky;
+                    bottom: 0;
+                    margin-top: auto;
+                    height: initial;
+                    min-height: initial;
+                    padding: 0;
+                }
+            }
+        }
+    }
+    &.slide-in-end {
+        .mat-mdc-dialog-container {
+            transform: translateX(100%);
+            animation: slide-in-end .3s forwards ease-out;
+            .mdc-dialog__container {
+                .mat-mdc-dialog-surface {
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes slide-in-end {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }

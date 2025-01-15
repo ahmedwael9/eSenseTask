@@ -1,0 +1,181 @@
+.mat-h1,
+.mat-h2,
+.mat-h3,
+.mat-h4,
+.mat-h5,
+.mat-h6 {
+    color: var(--text-strong);
+}
+
+.mat-h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.mat-h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.mat-h3 {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.mat-h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.mat-h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.mat-h6 {
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+.mat-body-1 {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.mat-body-2 {
+    font-size: 0.875rem;
+    font-weight: normal;
+}
+
+.mat-caption {
+    font-size: 0.75rem;
+    font-weight: normal;
+}
+
+.mat-subheading-1 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.mat-subheading-2 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.mat-overline {
+    font-size: 0.625rem;
+    font-weight: normal;
+}
+
+.text-medium {
+    color: var(--text-medium);
+}
+
+.text-strong {
+    color: var(--text-strong);
+}
+
+.text-strong-lighter {
+    color: var(--text-strong-lighter);
+}
+
+.text-disabled {
+    color: var(--text-disabled);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-start {
+    text-align: start;
+}
+
+.text-disappearing {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.text-normal {
+    font-weight: normal;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+
+.text-primary {
+    color: var(--primary-color);
+}
+
+.text-accent {
+    color: var(--accent-color);
+}
+
+.text-warn {
+    color: var(--warn-color);
+}
+
+.text-limit-lines-2,
+.text-limit-lines-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.text-limit-lines-2 {
+    -webkit-line-clamp: 2;
+            line-clamp: 2; 
+}
+
+.text-limit-lines-3 {
+    -webkit-line-clamp: 3;
+            line-clamp: 3; 
+}
+
+// Status colors
+.text-active {
+    color: var(--active-color) !important;
+}
+
+.text-draft {
+    color: var(--draft-color) !important;
+}
+
+.text-paused {
+    color: var(--paused-color) !important;
+}
+
+.text-refunded {
+    color: var(--refunded-color) !important;
+}
+
+.text-canceled {
+    color: var(--canceled-color) !important;
+}
+
+.text-ended {
+    color: var(--ended-color) !important;
+}
+
+.text-paid {
+    color: var(--paid-color) !important;
+}

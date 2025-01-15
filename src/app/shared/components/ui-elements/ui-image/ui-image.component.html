@@ -1,0 +1,33 @@
+<div class="ui-image"
+  [ngClass]="getImageClasses()"
+  [ngStyle]="getImageStyles()"
+>
+
+  <div
+    [hidden]="!isLoading"
+    class="ui-image-loading"
+  >
+    <ui-skeleton-loader
+      type="image"
+      [fullWidth]="true"
+      [fullHeight]="true"
+    />
+  </div>
+
+  <div [hidden]="!isError">
+    <div class="ui-image-error">
+      <ui-icon name="image-slash" size="medium" />
+    </div>
+  </div>
+  
+  <img
+    [hidden]="isError"
+    class="ui-image-tag"
+    [src]="src"
+    [alt]="alt"
+    (load)="onImageLoad()"
+    (error)="onImageError()"
+    [ngClass]="{ 'show' : !isLoading && !isError }"
+  />
+
+</div>

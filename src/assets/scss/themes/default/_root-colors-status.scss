@@ -1,0 +1,95 @@
+$colors-light: (
+  active: (
+    color: #1B7A36,
+    fade-color: #CDF4D8
+  ),
+  draft: (
+    color: #02090F,
+    fade-color: #E5EBF0
+  ),
+  paused: (
+    color: #B94137,
+    fade-color: #FCE4E2
+  ),
+  refunded: (
+    color: #279F8A,
+    fade-color: #ebf5f3
+  ),
+  canceled: (
+    color: #ff9d5c,
+    fade-color: #fef5ee
+  ),
+  ended: (
+    color: #ff9d5c,
+    fade-color: #fef5ee
+  ),
+  paid: (
+    color: #1B7A36,
+    fade-color: #ebf5f3
+  )
+);
+
+$colors-dark: (
+  active: (
+    color: #1B7A36,
+    fade-color: rgba(#1B7A36, 0.2)
+  ),
+  draft: (
+    color: #353d44,
+    fade-color: rgba(#353d44, 0.2)
+  ),
+  paused: (
+    color: #B94137,
+    fade-color: rgba(#B94137, 0.2)
+  ),
+  refunded: (
+    color: #279F8A,
+    fade-color: rgba(#279F8A, 0.2)
+  ),
+  canceled: (
+    color: #FF9D5C,
+    fade-color: rgba(#FF9D5C, 0.2)
+  ),
+  ended: (
+    color: #FF9D5C,
+    fade-color: rgba(#FF9D5C, 0.2)
+  ),
+  paid: (
+    color: #1B7A36,
+    fade-color: rgba(#1B7A36, 0.2)
+  )
+);
+
+[theme-mode=light] {
+  --active-color: #{map-get($colors-light, active, color)};
+  --active-fade-color: #{map-get($colors-light, active, fade-color)};
+  --draft-color: #{map-get($colors-light, draft, color)};
+  --draft-fade-color: #{map-get($colors-light, draft, fade-color)};
+  --paused-color: #{map-get($colors-light, paused, color)};
+  --paused-fade-color: #{map-get($colors-light, paused, fade-color)};
+  --refunded-color: #{map-get($colors-light, refunded, color)};
+  --refunded-fade-color: #{map-get($colors-light, refunded, fade-color)};
+  --canceled-color: #{map-get($colors-light, canceled, color)};
+  --canceled-fade-color: #{map-get($colors-light, canceled, fade-color)};
+  --ended-color: #{map-get($colors-light, ended, color)};
+  --ended-fade-color: #{map-get($colors-light, ended, fade-color)};
+  --paid-color: #{map-get($colors-light, paid, color)};
+  --paid-fade-color: #{map-get($colors-light, paid, fade-color)};
+}
+
+[theme-mode=dark] {
+  --active-color: #{map-get($colors-dark, active, color)};
+  --active-fade-color: #{map-get($colors-dark, active, fade-color)};
+  --draft-color: #{map-get($colors-dark, draft, color)};
+  --draft-fade-color: #{map-get($colors-dark, draft, fade-color)};
+  --paused-color: #{map-get($colors-dark, paused, color)};
+  --paused-fade-color: #{map-get($colors-dark, paused, fade-color)};
+  --refunded-color: #{map-get($colors-dark, refunded, color)};
+  --refunded-fade-color: #{map-get($colors-dark, refunded, fade-color)};
+  --canceled-color: #{map-get($colors-dark, canceled, color)};
+  --canceled-fade-color: #{map-get($colors-dark, canceled, fade-color)};
+  --ended-color: #{map-get($colors-dark, ended, color)};
+  --ended-fade-color: #{map-get($colors-dark, ended, fade-color)};
+  --paid-color: #{map-get($colors-dark, paid, color)};
+  --paid-fade-color: #{map-get($colors-dark, paid, fade-color)};
+}

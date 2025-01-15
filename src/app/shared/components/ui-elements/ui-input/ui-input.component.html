@@ -1,0 +1,10 @@
+<div class="ui-input-text" [ngClass]="getInputTextClasses()">
+  <mat-form-field appearance="outline">
+    <mat-label>Favorite food</mat-label>
+    <input matInput  [formControl]="control" placeholder="Ex. Pizza" value="Sushi">
+    <mat-error *ngIf="(control.hasError('required') || control.hasError('emptyspace')) && control.touched">This field is required</mat-error>
+  </mat-form-field>
+  <small>
+  </small>
+</div>
+

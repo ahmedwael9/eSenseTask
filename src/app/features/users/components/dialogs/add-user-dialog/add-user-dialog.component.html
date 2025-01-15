@@ -1,0 +1,43 @@
+<div class="dialog">
+  <div class="dialog-header px-3">
+    <h2>
+      {{ isEdit ? 'تعديل على الاسم' : 'اضافة الاسم' }}
+    </h2>
+  </div>
+  <div class="dialog-content">
+    <form [formGroup]="nameForm" class="form px-3 py-2">
+      <!-- Name Field -->
+      <div class="form-group">
+        <label for="name">الاسم</label>
+        <input 
+          type="text" 
+          id="name" 
+          formControlName="name" 
+          class="input" 
+          placeholder="اكتب الاسم او الرقم" 
+          [ngClass]="{ 'input-error': nameForm.get('name')?.invalid && nameForm.get('name')?.touched }"
+        />
+        <div class="error" *ngIf="nameForm.get('name')?.invalid && nameForm.get('name')?.touched">
+          <mat-error *ngIf="nameForm.get('name')?.errors?.['required']">الاسم مطلوب.</mat-error>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="details">التفاصيل</label>
+        <textarea 
+          id="details" 
+          formControlName="details" 
+          class="textarea" 
+          placeholder="التفاصيل" 
+          [ngClass]="{ 'textarea-error': nameForm.get('details')?.invalid && nameForm.get('details')?.touched }"
+        ></textarea>
+        <div class="error" *ngIf="nameForm.get('details')?.invalid && nameForm.get('details')?.touched">
+          <mat-error *ngIf="nameForm.get('details')?.errors?.['required']">التفاصيل مطلوبة.</mat-error>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="dialog-actions py-2">
+    <button class="btn save" (click)="save()">حفظ</button>
+    <button class="btn cancel" (click)="close()">الغاء</button>
+  </div>
+</div>

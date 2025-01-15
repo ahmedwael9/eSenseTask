@@ -1,0 +1,166 @@
+@import '../variables/breakpoints';
+
+$spacing-values: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 3rem,
+);
+
+@for $i from 0 through 5 {
+    .me-#{$i} {
+        margin-inline-end: map-get($spacing-values, $i) !important;
+    }
+
+    .ms-#{$i} {
+        margin-inline-start: map-get($spacing-values, $i) !important;
+    }
+
+    .mt-#{$i} {
+        margin-top: map-get($spacing-values, $i) !important;
+    }
+
+    .mb-#{$i} {
+        margin-bottom: map-get($spacing-values, $i) !important;
+    }
+
+    .mx-#{$i} {
+        margin-inline-start: map-get($spacing-values, $i) !important;
+        margin-inline-end: map-get($spacing-values, $i) !important;
+    }
+
+    .my-#{$i} {
+        margin-block-start: map-get($spacing-values, $i) !important;
+        margin-block-end: map-get($spacing-values, $i) !important;
+    }
+
+    .pe-#{$i} {
+        padding-inline-end: map-get($spacing-values, $i) !important;
+    }
+
+    .ps-#{$i} {
+        padding-inline-start: map-get($spacing-values, $i) !important;
+    }
+
+    .pt-#{$i} {
+        padding-top: map-get($spacing-values, $i) !important;
+    }
+
+    .pb-#{$i} {
+        padding-bottom: map-get($spacing-values, $i) !important;
+    }
+
+    .px-#{$i} {
+        padding-inline-start: map-get($spacing-values, $i) !important;
+        padding-inline-end: map-get($spacing-values, $i) !important;
+    }
+
+    .py-#{$i} {
+        padding-block-start: map-get($spacing-values, $i) !important;
+        padding-block-end: map-get($spacing-values, $i) !important;
+    }
+}
+
+.me-auto {
+    margin-inline-end: auto !important;
+}
+
+.ms-auto {
+    margin-inline-start: auto !important;
+}
+
+.mx-auto {
+    margin-inline-start: auto !important;
+    margin-inline-end: auto !important;
+}
+
+.my-auto {
+    margin-block-start: auto !important;
+    margin-block-end: auto !important;
+}
+
+@for $i from 0 through 5 {
+    @each $breakpoint, $value in $break-points {
+        @include breakpoint($breakpoint, min) {
+            .me-#{$breakpoint}-#{$i} {
+                margin-inline-end: map-get($spacing-values, $i) !important;
+            }
+
+            .ms-#{$breakpoint}-#{$i} {
+                margin-inline-start: map-get($spacing-values, $i) !important;
+            }
+
+            .mt-#{$breakpoint}-#{$i} {
+                margin-top: map-get($spacing-values, $i) !important;
+            }
+
+            .mb-#{$breakpoint}-#{$i} {
+                margin-bottom: map-get($spacing-values, $i) !important;
+            }
+
+            .mx-#{$breakpoint}-#{$i} {
+                margin-inline-start: map-get($spacing-values, $i) !important;
+                margin-inline-end: map-get($spacing-values, $i) !important;
+            }
+
+            .my-#{$breakpoint}-#{$i} {
+                margin-block-start: map-get($spacing-values, $i) !important;
+                margin-block-end: map-get($spacing-values, $i) !important;
+            }
+
+            .me-#{$breakpoint}-auto {
+                margin-inline-end: auto !important;
+            }
+
+            .ms-#{$breakpoint}-auto {
+                margin-inline-start: auto !important;
+            }
+
+            .mt-#{$breakpoint}-auto {
+                margin-top: auto !important;
+            }
+
+            .mb-#{$breakpoint}-auto {
+                margin-bottom: auto !important;
+            }
+
+            .mx-#{$breakpoint}-auto {
+                margin-inline-start: auto !important;
+                margin-inline-end: auto !important;
+            }
+
+            .my-#{$breakpoint}-auto {
+                margin-block-start: auto !important;
+                margin-block-end: auto !important;
+            }
+
+            .pe-#{$breakpoint}-#{$i} {
+                padding-inline-end: map-get($spacing-values, $i) !important;
+            }
+
+            .ps-#{$breakpoint}-#{$i} {
+                padding-inline-start: map-get($spacing-values, $i) !important;
+            }
+
+            .pt-#{$breakpoint}-#{$i} {
+                padding-top: map-get($spacing-values, $i) !important;
+            }
+
+            .pb-#{$breakpoint}-#{$i} {
+                padding-bottom: map-get($spacing-values, $i) !important;
+            }
+
+            .px-#{$breakpoint}-#{$i} {
+                padding-inline-start: map-get($spacing-values, $i) !important;
+                padding-inline-end: map-get($spacing-values, $i) !important;
+            }
+
+            .py-#{$breakpoint}-#{$i} {
+                padding-block-start: map-get($spacing-values, $i) !important;
+                padding-block-end: map-get($spacing-values, $i) !important;
+            }
+        }
+    }
+}

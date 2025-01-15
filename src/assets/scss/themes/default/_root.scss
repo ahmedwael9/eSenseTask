@@ -1,0 +1,60 @@
+@import 'variables/breakpoints';
+
+@import 'themes/default/root-colors-status';
+
+:root {
+  --primary-light-color: #{mat-color($dooh-smb-primary, 50)};
+  --accent-light-color: #{mat-color($dooh-smb-accent, 50)};
+  --warn-light-color: #{mat-color($dooh-smb-warn, 50)};
+
+  --primary-soft-color: #{mat-color($dooh-smb-primary, A100)};
+  --accent-soft-color: #{mat-color($dooh-smb-accent, A100)};
+  --warn-soft-color: #{mat-color($dooh-smb-warn, A100)};
+
+  --primary-light1-color: #{mat-color($dooh-smb-primary, A300)};
+  --accent-light1-color: #{mat-color($dooh-smb-accent, A300)};
+  --warn-light1-color: #{mat-color($dooh-smb-warn, A50)};
+
+  --primary-color: #{mat-color($dooh-smb-primary, 500)};
+  --accent-color: #{mat-color($dooh-smb-accent, 500)};
+  --warn-color: #{mat-color($dooh-smb-warn, 500)};
+
+  --primary-dark-color: #{mat-color($dooh-smb-primary, 900)};
+  --accent-dark-color: #{mat-color($dooh-smb-accent, 900)};
+  --warn-dark-color: #{mat-color($dooh-smb-warn, 900)};
+
+  --font-family: 'gotham', sans-serif;
+
+  --font-size-sm: .85em;
+  --font-size-md: 1em;
+  --font-size-lg: 1.125em;
+
+  --input-bottom-gutter: 1rem;
+  --input-border-radius: 6px;
+
+  --fake-bold: 0 .015em currentColor,0 -.015em currentColor,.015em 0 currentColor,-.015em 0 currentColor;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+
+  --dashboard-header-height: 64px;
+  --dashboard-subheader-height: 40px;
+  --dashboard-rail-width: 212px;
+  --dashboard-rail-width-collapsed: 72px;
+  --page-sides-space: 1.5rem;
+}
+
+[theme-mode=dark] {
+  --primary-light-color: #{map-get($dooh-smb-primary, contrast, 50)};
+  --accent-light-color: #{map-get($dooh-smb-accent, contrast, 50)};
+  --warn-light-color: #{map-get($dooh-smb-warn, contrast, 50)};
+}
+
+@include breakpoint(sm, max) {
+  :root {
+    --page-sides-space: .5rem;
+  }
+}

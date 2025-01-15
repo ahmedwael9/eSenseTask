@@ -32,8 +32,15 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/assets/scss/app.scss",
+              "@angular/material/prebuilt-themes/azure-blue.css"
+              
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/assets/scss"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -91,12 +98,16 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/assets/scss/app.scss",
+              "@angular/material/prebuilt-themes/azure-blue.css"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "38bec6ed-07b6-408c-8cf3-c78348ed05cb"
   }
 }

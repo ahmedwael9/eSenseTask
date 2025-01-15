@@ -1,0 +1,115 @@
+ui-image {
+    display: block;
+    width: 100%;
+}
+
+.ui-image {
+    position: relative;
+    overflow: hidden;
+
+    .ui-image-tag {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        &.show {
+            animation: fade-in .3s forwards;
+        }
+    }
+
+    .ui-image-loading {
+        position: absolute;
+        inset: 0;
+    }
+
+    .ui-image-error {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--background-strong);
+    }
+
+    &.ui-image-ratio {
+        &-square {
+            aspect-ratio: 1;
+        }
+        &-landscape {
+            aspect-ratio: 16 / 9;
+        }
+        &-portrait {
+            aspect-ratio: 9 / 16;
+        }
+    }
+
+    &.ui-image-radius {
+        &-sharp {
+            border-radius: 0;
+        }
+        &-rounded {
+            border-radius: 5px;
+        }
+        &-circle {
+            border-radius: 50%;
+        }
+    }
+
+    &.ui-image-position {
+        &-center {
+            .ui-image-tag {
+                object-position: center;
+            }
+        }
+        &-top {
+            .ui-image-tag {
+                object-position: top;
+            }
+        }
+        &-bottom {
+            .ui-image-tag {
+                object-position: bottom;
+            }
+        }
+        &-left {
+            .ui-image-tag {
+                object-position: left;
+            }
+        }
+        &-right {
+            .ui-image-tag {
+                object-position: right;
+            }
+        }
+    }
+
+    &.ui-image-type {
+        &-cover {
+            .ui-image-tag {
+                object-fit: cover;
+            }
+        }
+        &-contain {
+            .ui-image-tag {
+                object-fit: contain;
+            }
+        }
+    }
+
+    &.ui-image-variant {
+        &-stroked {
+            border: 1px solid var(--border-color);
+        }
+    }
+
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

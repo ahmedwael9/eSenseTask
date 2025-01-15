@@ -1,0 +1,41 @@
+.position-relative {
+    position: relative !important;
+}
+
+.position-absolute {
+    position: absolute !important;
+}
+
+.position-fixed {
+    position: fixed !important;
+}
+
+.position-sticky {
+    position: sticky !important;
+}
+
+.top-0 {
+    top: 0;
+}
+
+.bottom-0 {
+    bottom: 0;
+}
+
+.start-0 {
+    left: 0;
+}
+
+.end-0 {
+    right: 0;
+}
+
+.inset-0 {
+    inset: 0;
+}
+
+@for $i from 0 through 10 {
+    .z-index-#{$i} {
+        z-index: #{$i};
+    }
+}

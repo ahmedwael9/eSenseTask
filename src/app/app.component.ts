@@ -3,11 +3,18 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
+  template: '<router-outlet></router-outlet>',
   standalone: true,
   imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'eccomerce';
+  constructor() {
+    this.setDirection('rtl'); 
+  }
+
+  setDirection(direction: 'ltr' | 'rtl') {
+    document.documentElement.setAttribute('dir', direction);
+    document.documentElement.setAttribute('lang', 'ar'); 
+  }
+
 }
